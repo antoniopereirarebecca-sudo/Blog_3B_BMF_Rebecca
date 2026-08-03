@@ -23,7 +23,7 @@ header{
 main{
     background-color: var(--cor-fundo);
     color: var(--cor-primaria);
-    margin: 0auto;
+    margin: 0 auto;
     padding: 16px;
     display: flex;
     flex-wrap: wrap;
