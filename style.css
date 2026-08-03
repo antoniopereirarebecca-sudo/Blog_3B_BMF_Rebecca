@@ -1,0 +1,13 @@
+:root {
+--cor-primaria:#43ABAB;
+--cor-secundaria:#4ABDBD;
+--cor-fundo:#CBECEC;
+--cor-texto:#378C8C;
+--cor-contraste:#00BDBD;
+--cor-botao:#4DD6D6;
+}
+
+body {
+max-width: 100vw;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
