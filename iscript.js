@@ -1,63 +1,107 @@
 document.addEventListener("DOMContentLoaded", () => {
     prepararReacoes();
+    prepararAbas();
     prepararAnimacaoCards();
     criarBotaoTopo();
-    prepararAbas();
 });
 
-/* Sistema de curtidas e rejeições */
+/* Contador de curtidas e rejeições */
 function prepararReacoes() {
     const artigos = document.querySelectorAll("article");
 
     artigos.forEach((artigo, indice) => {
-        const botoes = artigo.querySelectorAll("button");
+        const botaoCurtir = artigo.querySelector(".botao-curtir");
+        const botaoNaoCurtir = artigo.querySelector(".botao-nao-curtir");
 
-        if (botoes.length < 2) {
+        if (!botaoCurtir || !botaoNaoCurtir) {
             return;
         }
 
-        const botaoUm = botoes[0];
-        const botaoDois = botoes[1];
+        const contadorCurtidas =
+            botaoCurtir.querySelector("span");
 
-        const contadorBotaoUm = botaoUm.querySelector("span");
-        const contadorBotaoDois = botaoDois.querySelector("span");
+        const contadorNaoCurtidas =
+            botaoNaoCurtir.querySelector("span");
 
-        const idCard = `card-${indice + 1}`;
+        const idArtigo = `artigo-${indice + 1}`;
 
-        const chaveBotaoUm = `${idCard}-botaoUm`;
-        const chaveBotaoDois = `${idCard}-botaoDois`;
+        const chaveCurtidas = `${idArtigo}-curtidas`;
+        const chaveNaoCurtidas = `${idArtigo}-nao-curtidas`;
 
         let curtidas =
-            Number(localStorage.getItem(chaveBotaoUm)) || 0;
+            Number(localStorage.getItem(chaveCurtidas)) || 0;
 
-        let rejeicoes =
-            Number(localStorage.getItem(chaveBotaoDois)) || 0;
+        let naoCurtidas =
+            Number(localStorage.getItem(chaveNaoCurtidas)) || 0;
 
-        contadorBotaoUm.textContent = curtidas;
-        contadorBotaoDois.textContent = rejeicoes;
+        contadorCurtidas.textContent = curtidas;
+        contadorNaoCurtidas.textContent = naoCurtidas;
 
-        botaoUm.addEventListener("click", () => {
+        botaoCurtir.addEventListener("click", () => {
             curtidas++;
 
-            contadorBotaoUm.textContent = curtidas;
-            localStorage.setItem(chaveBotaoUm, curtidas);
+            contadorCurtidas.textContent = curtidas;
+
+            localStorage.setItem(
+                chaveCurtidas,
+                curtidas
+            );
         });
 
-        botaoDois.addEventListener("click", () => {
-            rejeicoes++;
+        botaoNaoCurtir.addEventListener("click", () => {
+            naoCurtidas++;
 
-            contadorBotaoDois.textContent = rejeicoes;
-            localStorage.setItem(chaveBotaoDois, rejeicoes);
+            contadorNaoCurtidas.textContent = naoCurtidas;
+
+            localStorage.setItem(
+                chaveNaoCurtidas,
+                naoCurtidas
+            );
         });
     });
 }
 
-/*
- * O efeito de zoom dos cards é realizado pelo CSS,
- * utilizando article:hover.
- */
+/* Sistema de abas */
+function prepararAbas() {
+    const abas = document.querySelectorAll(".aba");
+    const artigos = document.querySelectorAll("article");
+
+    abas.forEach((aba) => {
+        aba.addEventListener("click", () => {
+            const categoriaEscolhida =
+                aba.dataset.categoria;
+
+            abas.forEach((item) => {
+                item.classList.remove("ativa");
+            });
+
+            aba.classList.add("ativa");
+
+            artigos.forEach((artigo) => {
+                const categoriaArtigo =
+                    artigo.dataset.categoria;
+
+                if (
+                    categoriaEscolhida === "todos" ||
+                    categoriaArtigo === categoriaEscolhida
+                ) {
+                    artigo.style.display = "flex";
+                } else {
+                    artigo.style.display = "none";
+                }
+            });
+        });
+    });
+}
+
+/* A animação dos cards é feita pelo CSS */
 function prepararAnimacaoCards() {
-    // O efeito está no arquivo style.css.
+    const artigos = document.querySelectorAll("article");
+
+    artigos.forEach((artigo) => {
+        artigo.style.transition =
+            "transform 0.3s ease, box-shadow 0.3s ease";
+    });
 }
 
 /* Botão voltar ao topo */
@@ -72,10 +116,11 @@ function criarBotaoTopo() {
     botaoTopo.style.bottom = "20px";
     botaoTopo.style.right = "20px";
     botaoTopo.style.padding = "10px 15px";
-    botaoTopo.style.cursor = "pointer";
     botaoTopo.style.border = "none";
     botaoTopo.style.borderRadius = "8px";
-    botaoTopo.style.fontFamily = "inherit";
+    botaoTopo.style.backgroundColor = "#23636E";
+    botaoTopo.style.color = "white";
+    botaoTopo.style.cursor = "pointer";
     botaoTopo.style.zIndex = "1000";
 
     document.body.appendChild(botaoTopo);
@@ -92,37 +137,6 @@ function criarBotaoTopo() {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
-        });
-    });
-}
-
-/* Sistema de abas */
-function prepararAbas() {
-    const abas = document.querySelectorAll(".aba");
-    const artigos = document.querySelectorAll("article");
-
-    abas.forEach((aba) => {
-        aba.addEventListener("click", () => {
-            const categoriaEscolhida = aba.dataset.categoria;
-
-            abas.forEach((item) => {
-                item.classList.remove("ativa");
-            });
-
-            aba.classList.add("ativa");
-
-            artigos.forEach((artigo) => {
-                const categoriaArtigo = artigo.dataset.categoria;
-
-                if (
-                    categoriaEscolhida === "todos" ||
-                    categoriaArtigo === categoriaEscolhida
-                ) {
-                    artigo.style.display = "flex";
-                } else {
-                    artigo.style.display = "none";
-                }
-            });
         });
     });
 }
