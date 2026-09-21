@@ -1,55 +1,50 @@
-document.addEventListener("DOMContentLoaded",() =>{
-prepararReacoes();
-prepararAnimacaoCards();
-criarBotaoTopo();
-})
-
+document.addEventListener("DOMContentLoaded", () => {
+    prepararReacoes();
+    prepararAnimacaoCards();
+    criarBotaoTopo();
+});
 
 function prepararReacoes() {
     const artigos = document.querySelectorAll("article");
 
     artigos.forEach((artigo, indice) => {
-
         const botoes = artigo.querySelectorAll("button");
 
-        if(botoes.leght < 2){
-            return; 
-        } 
+        // Correção: leght → length
+        if (botoes.length < 2) {
+            return;
+        }
 
-        const botaoUM = butoes[0];
+        // Correção: butoes → botoes
+        const botaoUM = botoes[0];
         const botaoDOIS = botoes[1];
 
         const contadorBotaoUM = botaoUM.querySelector("span");
         const contadorBotaoDOIS = botaoDOIS.querySelector("span");
 
-         const idCard = `card-${indice + 1}`;
+        const idCard = `card-${indice + 1}`;
 
-         const chavebotaoUM = `${idCard}-botaoUM`;
-         const chavebotaoDOIS = `${idCard}-botaoDOIS`;
+        const chaveBotaoUM = `${idCard}-botaoUM`;
+        const chaveBotaoDOIS = `${idCard}-botaoDOIS`;
 
-        let UM = Number(localStorage.getItem(chavebotaoUM)) ||0;
-        let DOIS = Number(localStorage.getItem(chavebotaoDOIS)) ||0;
-        
+        let UM = Number(localStorage.getItem(chaveBotaoUM)) || 0;
+        let DOIS = Number(localStorage.getItem(chaveBotaoDOIS)) || 0;
+
         contadorBotaoUM.textContent = UM;
         contadorBotaoDOIS.textContent = DOIS;
 
-        botaoUM.addEventListener("click", () =>{
+        botaoUM.addEventListener("click", () => {
             UM++;
             contadorBotaoUM.textContent = UM;
 
-            localStorage.setItem(
-                chavebotaoUM,UM
-            );
+            localStorage.setItem(chaveBotaoUM, UM);
         });
-        botaoDOIS.addEventListener("click", () =>{
+
+        botaoDOIS.addEventListener("click", () => {
             DOIS++;
             contadorBotaoDOIS.textContent = DOIS;
 
-            localStorage.setItem(
-                chavebotaoDOIS,DOIS
-            );
+            localStorage.setItem(chaveBotaoDOIS, DOIS);
         });
-    })
-
-
+    });
 }
