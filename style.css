@@ -1,91 +1,117 @@
+:root {
+    --cor-primaria: #43ABAB;
+    --cor-secundaria: #4ABDBD;
+    --cor-fundo: #CBECEC;
+    --cor-texto: #055353;
+    --cor-contraste: #23636E;
+    --cor-botao: #82E9E9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    margin: 0;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-contraste);
+    text-align: center;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+main {
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria);
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 article {
     display: flex;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 16px;
+    gap: 16px;
+    padding: 16px;
+    flex: 1 1 25%;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     justify-content: center;
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
 
-    flex: 1 1 25%;
-    margin: 16px;
-    padding: 20px;
-    gap: 16px;
-
-    text-align: center;
-    background: linear-gradient(135deg, #ffffff, #cbecec);
-    border: 2px solid #43abab;
-    border-radius: 16px;
-
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-
-    /* Deixa a animação suave */
+    /* Transição suave do efeito */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito quando o mouse passa sobre o card */
+/* Efeito de zoom ao passar o mouse sobre o card */
 article:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transform: scale(1.03);
+    box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.4);
 }
 
-/* Estilo das imagens dos cards */
 article img {
     width: 160px;
     height: 160px;
-
     object-fit: cover;
-    border-radius: 12px;
-    border: 3px solid #43abab;
-
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-/* Efeito na imagem ao passar o mouse sobre o card */
-article:hover img {
-    transform: scale(1.08);
-    filter: brightness(1.1);
-}
-
-/* Estilo dos títulos */
-article h2 {
-    color: #23636e;
-    margin: 0;
-}
-
-/* Estilo do texto dos artigos */
-article p {
-    color: #055353;
-    line-height: 1.5;
-}
-
-/* Estilo dos botões */
-article button {
-    background-color: #82e9e9;
-    color: #055353;
-    border: none;
     border-radius: 8px;
-    padding: 9px 14px;
+
+    /* Transição suave da imagem */
+    transition: transform 0.3s ease;
+}
+
+/* A imagem também aumenta um pouco */
+article:hover img {
+    transform: scale(1.05);
+}
+
+h1,
+h2 {
+    color: var(--cor-contraste);
+}
+
+.artigo-autor {
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+button {
+    background-color: var(--cor-botao);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
     margin: 4px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Efeito nos botões */
-article button:hover {
-    background-color: #4abdbd;
-    transform: scale(1.08);
+button:hover {
+    background-color: var(--cor-secundaria);
 }
 
-/* Área de comentários */
-article textarea {
+textarea {
     width: 90%;
     min-height: 70px;
-    padding: 10px;
-    border: 1px solid #43abab;
-    border-radius: 8px;
+    margin-top: 8px;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 6px;
+    padding: 8px;
     resize: vertical;
 }
 
-/* Ajuste para celulares */
+/* Ajuste para telas menores */
 @media (max-width: 768px) {
     article {
         flex: 1 1 100%;
