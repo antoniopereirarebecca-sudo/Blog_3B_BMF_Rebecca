@@ -3,164 +3,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog noticias da escola </title>
+
+    <title>Blog de Notícias da Escola</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-<h1> Blog de notícias e eventos da escola </h1>
+        <h1>Blog de Notícias e Eventos da Escola</h1>
 
+        <p>
+            Acompanhe as novidades, eventos e tudo o que acontece
+            na nossa escola.
+        </p>
 
-<p> Acompanhe as novidades, eventos e tudo o que acontece na nossa escola. </p>
+        <!-- Abas de navegação -->
+        <nav class="abas">
+            <button class="aba ativa" data-categoria="todos">
+                Início
+            </button>
+
+            <button class="aba" data-categoria="eventos">
+                Eventos
+            </button>
+
+            <button class="aba" data-categoria="estudos">
+                Estudos
+            </button>
+
+            <button class="aba" data-categoria="esportes">
+                Esportes
+            </button>
+        </nav>
     </header>
 
-<main>
-<article>
-    <img src="img/img 1.jpeg" alt=" informações sobre minha imagem " srcset="">
-<div>
-<h2>🍿 Contagem Regressiva: O que esperar da nossa Festa Junina 2026? Arebaba! 🔥 </h2>
+    <main>
+        <!-- Card 1 -->
+        <article data-categoria="eventos">
+            <img
+                src="img/img 1.jpeg"
+                alt="Decoração da Festa Junina da escola"
+            >
 
-<p class="artigo-autor">Organização: Aluna Rebeca do Terceiro ano do médio </p>
-<p> Julho chegou e o coração da nossa escola já está batendo no ritmo da quadrilha! A época mais gostosa do ano está batendo à porta, e os preparativos para a nossa tradicional Festa Julina estão a todo vapor pelos corredores.
-    Quem passa perto da quadra já consegue ouvir os ensaios da quadrilha, ver os ensaios dos passos ensaiados e o pessoal do grêmio recortando centenas de bandeirinhas coloridas. A expectativa está lá no alto, e tudo indica que este ano teremos uma das maiores festas que a escola já viu!
-Para começar a aquecer o clima, queremos saber o que está passando pela cabeça de vocês. Separamos os quatro pontos principais do evento para você votar e comentar:
-</p>
+            <div>
+                <h2>
+                    🍿 Contagem Regressiva: O que esperar da nossa
+                    Festa Junina 2026? 🔥
+                </h2>
 
-<button> ❤️ <span>0</span></button>
-<button> 👎  <span>0</span></button>
-<label>Comentario:</label>
-<textarea></textarea>
+                <p class="artigo-autor">
+                    Organização: Aluna Rebecca do 3º ano do Ensino Médio
+                </p>
 
+                <p>
+                    Julho chegou e o coração da nossa escola já está
+                    batendo no ritmo da quadrilha! Os preparativos para
+                    a tradicional Festa Junina estão a todo vapor.
+                    A expectativa está alta, e tudo indica que este ano
+                    teremos uma das maiores festas que a escola já viu.
+                </p>
 
-</div>
-</article>
-<article>
+                <button type="button">
+                    ❤️ <span>0</span>
+                </button>
 
+                <button type="button">
+                    👎 <span>0</span>
+                </button>
 
-    <img src="img/img2.jpeg" alt=" informações sobre minha imagem " srcset="">
-<div>
-<h2> Simulado fortalece a preparação para vestibulares 📑 </h2>
+                <label for="comentario1">Comentário:</label>
 
-<p class="artigo-autor">Organização: Aluna Rebecca – 3º ano do Ensino Médio </p>
-<p> Os estudantes participaram de um simulado com questões semelhantes às dos principais vestibulares e do ENEM. A atividade permitiu avaliar o desempenho dos alunos e identificar pontos que precisam ser reforçados nos estudos.
-</p>
+                <textarea
+                    id="comentario1"
+                    placeholder="Escreva seu comentário..."
+                ></textarea>
+            </div>
+        </article>
 
-<button> ❤️ <span>0</span></button>
-<button> 👎  <span>0</span></button>
-<label>Comentario:</label>
-<textarea></textarea>
+        <!-- Card 2 -->
+        <article data-categoria="estudos">
+            <img
+                src="img/img2.jpeg"
+                alt="Estudantes realizando um simulado"
+            >
 
+            <div>
+                <h2>
+                    Simulado fortalece a preparação para vestibulares 📑
+                </h2>
 
-</div>
-</article>
+                <p class="artigo-autor">
+                    Organização: Aluna Rebecca do 3º ano do Ensino Médio
+                </p>
 
-<article>
-    <img src="img/img 3.jpeg" alt=" informações sobre minha imagem " srcset="">
-<div>
-<h2> 👨‍🎓 Formatura do Ensino Médio 👩‍🎓</h2>
+                <p>
+                    Os estudantes participaram de um simulado com questões
+                    semelhantes às dos principais vestibulares e do ENEM.
+                    A atividade permitiu avaliar o desempenho dos alunos e
+                    identificar pontos que precisam ser reforçados nos estudos.
+                </p>
 
-<p class="artigo-autor">Organização: Aluna Rebecca – 3º ano do Ensino Médio </p>
-<p>  Formatura celebrará uma importante conquista
-</p>
-<p>A cerimônia de formatura marcará o encerramento de uma etapa importante na vida dos estudantes do Ensino Médio. O momento será de emoção, gratidão e comemoração pelas conquistas alcançadas ao longo dos anos de estudo, celebrando o início de novos desafios e oportunidades.</p>
+                <button type="button">
+                    ❤️ <span>0</span>
+                </button>
 
-<button> ❤️ <span>0</span></button>
-<button> 👎  <span>0</span></button>
-<label>Comentario:</label>
-<textarea></textarea>
+                <button type="button">
+                    👎 <span>0</span>
+                </button>
 
+                <label for="comentario2">Comentário:</label>
 
-</div>
+                <textarea
+                    id="comentario2"
+                    placeholder="Escreva seu comentário..."
+                ></textarea>
+            </div>
+        </article>
 
-</article>
+        <!-- Card 3 -->
+        <article data-categoria="eventos">
+            <img
+                src="img/img 3.jpeg"
+                alt="Formatura dos estudantes do Ensino Médio"
+            >
 
-<article>
-    <img src="img/img4.jpeg" alt=" informações sobre minha imagem " srcset="">
-<div>
-<h2> 🏆 Jogos Interclasses 2026 </h2>
+            <div>
+                <h2>
+                    👨‍🎓 Formatura do Ensino Médio 👩‍🎓
+                </h2>
 
-<p class="artigo-autor">Organização: Aluna Rebecca – 3º ano do Ensino Médio </p>
-<p>  ⚽ Interclasses prometem movimentar o Colégio Branca da Mota Fernandes 🏐
-</p>
-<p>Os tradicionais Jogos Interclasses estão chegando e prometem reunir os estudantes em dias de muita competição, integração e diversão. As equipes disputarão diversas modalidades esportivas, incentivando o trabalho em equipe, o respeito e o espírito esportivo. Toda a comunidade escolar está convidada a prestigiar e torcer pelas turmas.</p>
+                <p class="artigo-autor">
+                    Organização: Aluna Rebecca do 3º ano do Ensino Médio
+                </p>
 
-<button> ❤️ <span>0</span></button>
-<button> 👎  <span>0</span></button>
-<label>Comentario:</label>
-<textarea></textarea>
+                <p>
+                    A cerimônia de formatura marcará o encerramento de uma
+                    etapa importante na vida dos estudantes do Ensino Médio.
+                </p>
 
+                <p>
+                    O momento será de emoção, gratidão e comemoração pelas
+                    conquistas alcançadas ao longo dos anos de estudo,
+                    celebrando o início de novos desafios e oportunidades.
+                </p>
 
-</div>
+                <button type="button">
+                    ❤️ <span>0</span>
+                </button>
 
-</article>
+                <button type="button">
+                    👎 <span>0</span>
+                </button>
 
-<article>
-    <img src="img/img5.jpeg" alt=" informações sobre minha imagem " srcset="">
-<div>
-<h2> 📣 Energia nas Arquibancadas </h2>
+                <label for="comentario3">Comentário:</label>
 
-<p class="artigo-autor">Organização: Aluna Rebecca – 3º ano do Ensino Médio </p>
-<p>  Torcidas prometem dar um show de animação durante os Interclasses
-</p>
-<p>Além das competições, as torcidas também serão um dos grandes destaques dos Jogos Interclasses. Os estudantes já estão preparando cartazes, músicas e muita criatividade para apoiar suas equipes. A expectativa é transformar a quadra em um ambiente de alegria, respeito e integração.</p>
+                <textarea
+                    id="comentario3"
+                    placeholder="Escreva seu comentário..."
+                ></textarea>
+            </div>
+        </article>
 
-<button> ❤️ <span>0</span></button>
-<button> 👎  <span>0</span></button>
-<label>Comentario:</label>
-<textarea></textarea>
-</div>
-</article>
+        <!-- Card 4 -->
+        <article data-categoria="esportes">
+            <img
+                src="img/img4.jpeg"
+                alt="Jogos Interclasses da escola"
+            >
 
+            <div>
+                <h2>
+                    🏆 Jogos Interclasses 2026
+                </h2>
 
+                <p class="artigo-autor">
+                    Organização: Aluna Rebecca do 3º ano do Ensino Médio
+                </p>
 
+                <p>
+                    ⚽ Os Interclasses prometem movimentar o Colégio
+                    Branca da Mota Fernandes. 🏐
+                </p>
 
+                <p>
+                    Os tradicionais Jogos Interclasses estão chegando e
+                    prometem reunir os estudantes em dias de muita competição,
+                    integração e diversão.
+                </p>
 
-<article>
-    <img src="img/img6.jpeg" alt=" informações sobre minha imagem " srcset="">
-<div>
-<h2> 📝 Avaliação e Futuro </h2>
+                <button type="button">
+                    ❤️ <span>0</span>
+                </button>
 
-<p class="artigo-autor">Organização: Aluna Rebecca – 3º ano do Ensino Médio </p>
-<p>  Prova Paraná Mais será realizada na escola
-</p>
-<p>O Colégio Estadual Branca da Mota Fernandes realizará a Prova Paraná Mais, uma avaliação que auxilia no acompanhamento da aprendizagem dos estudantes e pode ser utilizada por instituições de ensino superior participantes em seus processos seletivos. A escola orienta os alunos a comparecerem preparados e aproveitarem essa importante oportunidade.</p>
+                <button type="button">
+                    👎 <span>0</span>
+                </button>
 
-<button> ❤️ <span>0</span></button>
-<button> 👎  <span>0</span></button>
-<label>Comentario:</label>
-<textarea></textarea>
+                <label for="comentario4">Comentário:</label>
 
+                <textarea
+                    id="comentario4"
+                    placeholder="Escreva seu comentário..."
+                ></textarea>
+            </div>
+        </article>
 
-</div>
+        <!-- Card 5 -->
+        <article data-categoria="esportes">
+            <img
+                src="img/img5.jpeg"
+                alt="Torcida nas arquibancadas durante os jogos"
+            >
 
-</article>
+            <div>
+                <h2>
+                    📣 Energia nas Arquibancadas
+                </h2>
 
-<article>
-    <img src="img/img7.jpeg" alt=" informações sobre minha imagem " srcset="">
-<div>
-<h2> 🍬 Desafio do Terceirão </h2>
+                <p class="artigo-autor">
+                    Organização: Aluna Rebecca do 3º ano do Ensino Médio
+                </p>
 
-<p class="artigo-autor">Organização: Aluna Rebecca – 3º ano do Ensino Médio </p>
-<p>  3º B de Exatas promoverá desafio do pote de doces
-</p>
-<p>O 3º B de Exatas realizará uma divertida dinâmica onde o seu objetivo é tentar adivinhar quantos doces há dentro das embalagens. Nesta edição, teremos dois prêmios em disputa: um pote grande e um pote pequeno. O participante que acertar ou chegar mais próximo da quantidade exata de cada recipiente será o grande vencedor e levará o respectivo pote recheado para casa. Para testar a sua sorte e registrar o seu palpite, os bilhetes estão disponíveis com os organizadores por R$ 2,00 para o pote menor e R$ 5,00 para o pote maior.</p>
+                <p>
+                    Torcidas prometem dar um show de animação durante
+                    os Interclasses.
+                </p>
 
-<button> ❤️ <span>0</span></button>
-<button> 👎  <span>0</span></button>
-<label>Comentario:</label>
-<textarea></textarea>
+                <p>
+                    Os estudantes já estão preparando cartazes, músicas
+                    e muita criatividade para apoiar suas equipes.
+                    A expectativa é transformar a quadra em um ambiente
+                    de alegria, respeito e integração.
+                </p>
 
+                <button type="button">
+                    ❤️ <span>0</span>
+                </button>
 
-</div>
+                <button type="button">
+                    👎 <span>0</span>
+                </button>
 
-</article>
+                <label for="comentario5">Comentário:</label>
 
-</main>
+                <textarea
+                    id="comentario5"
+                    placeholder="Escreva seu comentário..."
+                ></textarea>
+            </div>
+        </article>
 
+        <!-- Card 6 -->
+        <article data-categoria="estudos">
+            <img
+                src="img/img6.jpeg"
+                alt="Avaliação escolar e estudos"
+            >
+
+            <div>
+                <h2>
+                    📝 Avaliação e Futuro
+                </h2>
+
+                <p class="artigo-autor">
+                    Organização: Aluna Rebecca do 3º ano do Ensino Médio
+                </p>
+
+                <p>
+                    A Prova Paraná Mais será realizada na escola.
+                </p>
+
+                <p>
+                    A avaliação auxilia no acompanhamento da aprendizagem
+                    dos estudantes e pode ser utilizada por instituições
+                    de ensino superior participantes em seus processos
+                    seletivos.
+                </p>
+
+                <button type="button">
+                    ❤️ <span>0</span>
+                </button>
+
+                <button type="button">
+                    👎 <span>0</span>
+                </button>
+
+                <label for="comentario6">Comentário:</label>
+
+                <textarea
+                    id="comentario6"
+                    placeholder="Escreva seu comentário..."
+                ></textarea>
+            </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article data-categoria="eventos">
+            <img
+                src="img/img7.jpeg"
+                alt="Pote de doces do desafio do Terceirão"
+            >
+
+            <div>
+                <h2>
+                    🍬 Desafio do Terceirão
+                </h2>
+
+                <p class="artigo-autor">
+                    Organização: Aluna Rebecca do 3º ano do Ensino Médio
+                </p>
+
+                <p>
+                    O 3º B de Exatas promoverá o desafio do pote de doces.
+                </p>
+
+                <p>
+                    O participante deverá tentar adivinhar quantos doces
+                    há dentro das embalagens. Quem acertar ou chegar mais
+                    próximo da quantidade exata será o vencedor e levará
+                    o respectivo pote para casa.
+                </p>
+
+                <button type="button">
+                    ❤️ <span>0</span>
+                </button>
+
+                <button type="button">
+                    👎 <span>0</span>
+                </button>
+
+                <label for="comentario7">Comentário:</label>
+
+                <textarea
+                    id="comentario7"
+                    placeholder="Escreva seu comentário..."
+                ></textarea>
+            </div>
+        </article>
+    </main>
+
+    <script src="iscript.js"></script>
 </body>
-<script src="iscript.js"></script>
 </html>
-
-
-
