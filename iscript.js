@@ -48,24 +48,10 @@ function prepararReacoes() {
 }
 
 function prepararAnimacaoCards() {
-    const artigos = document.querySelectorAll("article");
-
-    artigos.forEach((artigo) => {
-        artigo.style.transition =
-            "transform 0.3s ease, box-shadow 0.3s ease";
-
-        artigo.addEventListener("mouseenter", () => {
-            artigo.style.transform = "scale(1.02)";
-            artigo.style.boxShadow =
-                "4px 4px 15px rgba(0, 0, 0, 0.4)";
-        });
-
-        artigo.addEventListener("mouseleave", () => {
-            artigo.style.transform = "scale(1)";
-            artigo.style.boxShadow =
-                "2px 2px 10px rgba(0, 0, 0, 0.3)";
-        });
-    });
+    /*
+     * O efeito de zoom dos cards está sendo realizado pelo CSS,
+     * usando article:hover.
+     */
 }
 
 function criarBotaoTopo() {
@@ -84,6 +70,7 @@ function criarBotaoTopo() {
     botaoTopo.style.borderRadius = "8px";
     botaoTopo.style.backgroundColor = "#43ABAB";
     botaoTopo.style.color = "white";
+    botaoTopo.style.zIndex = "1000";
 
     document.body.appendChild(botaoTopo);
 
