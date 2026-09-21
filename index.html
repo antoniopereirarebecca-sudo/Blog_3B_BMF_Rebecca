@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
 </head>
 
 <body>
+
     <header>
         <h1>Blog de Notícias e Eventos da Escola</h1>
 
@@ -18,33 +20,30 @@
             na nossa escola.
         </p>
 
-        <!-- Abas de navegação -->
-        <nav class="abas">
-            <button class="aba ativa" data-categoria="todos">
+        <nav class="abas" aria-label="Categorias de notícias">
+            <button class="aba ativa" data-categoria="todos" type="button">
                 Início
             </button>
 
-            <button class="aba" data-categoria="eventos">
+            <button class="aba" data-categoria="eventos" type="button">
                 Eventos
             </button>
 
-            <button class="aba" data-categoria="estudos">
+            <button class="aba" data-categoria="estudos" type="button">
                 Estudos
             </button>
 
-            <button class="aba" data-categoria="esportes">
+            <button class="aba" data-categoria="esportes" type="button">
                 Esportes
             </button>
         </nav>
     </header>
 
     <main>
-        <!-- Card 1 -->
+
         <article data-categoria="eventos">
-            <img
-                src="img/img 1.jpeg"
-                alt="Decoração da Festa Junina da escola"
-            >
+            <img src="img/img 1.jpeg"
+                alt="Decoração da Festa Junina da escola">
 
             <div>
                 <h2>
@@ -58,10 +57,9 @@
 
                 <p>
                     Julho chegou e o coração da nossa escola já está
-                    batendo no ritmo da quadrilha! Os preparativos para
+                    batendo no ritmo da quadrilha. Os preparativos para
                     a tradicional Festa Junina estão a todo vapor.
-                    A expectativa está alta, e tudo indica que este ano
-                    teremos uma das maiores festas que a escola já viu.
+                    A expectativa está alta para uma grande festa.
                 </p>
 
                 <button type="button">
@@ -74,19 +72,14 @@
 
                 <label for="comentario1">Comentário:</label>
 
-                <textarea
-                    id="comentario1"
-                    placeholder="Escreva seu comentário..."
-                ></textarea>
+                <textarea id="comentario1"
+                    placeholder="Escreva seu comentário..."></textarea>
             </div>
         </article>
 
-        <!-- Card 2 -->
         <article data-categoria="estudos">
-            <img
-                src="img/img2.jpeg"
-                alt="Estudantes realizando um simulado"
-            >
+            <img src="img/img2.jpeg"
+                alt="Estudantes realizando um simulado">
 
             <div>
                 <h2>
@@ -114,19 +107,14 @@
 
                 <label for="comentario2">Comentário:</label>
 
-                <textarea
-                    id="comentario2"
-                    placeholder="Escreva seu comentário..."
-                ></textarea>
+                <textarea id="comentario2"
+                    placeholder="Escreva seu comentário..."></textarea>
             </div>
         </article>
 
-        <!-- Card 3 -->
         <article data-categoria="eventos">
-            <img
-                src="img/img 3.jpeg"
-                alt="Formatura dos estudantes do Ensino Médio"
-            >
+            <img src="img/img 3.jpeg"
+                alt="Formatura dos estudantes do Ensino Médio">
 
             <div>
                 <h2>
@@ -144,8 +132,7 @@
 
                 <p>
                     O momento será de emoção, gratidão e comemoração pelas
-                    conquistas alcançadas ao longo dos anos de estudo,
-                    celebrando o início de novos desafios e oportunidades.
+                    conquistas alcançadas durante os anos de estudo.
                 </p>
 
                 <button type="button">
@@ -158,19 +145,14 @@
 
                 <label for="comentario3">Comentário:</label>
 
-                <textarea
-                    id="comentario3"
-                    placeholder="Escreva seu comentário..."
-                ></textarea>
+                <textarea id="comentario3"
+                    placeholder="Escreva seu comentário..."></textarea>
             </div>
         </article>
 
-        <!-- Card 4 -->
         <article data-categoria="esportes">
-            <img
-                src="img/img4.jpeg"
-                alt="Jogos Interclasses da escola"
-            >
+            <img src="img/img4.jpeg"
+                alt="Jogos Interclasses da escola">
 
             <div>
                 <h2>
@@ -182,14 +164,14 @@
                 </p>
 
                 <p>
-                    ⚽ Os Interclasses prometem movimentar o Colégio
+                    ⚽ Os Jogos Interclasses prometem movimentar o Colégio
                     Branca da Mota Fernandes. 🏐
                 </p>
 
                 <p>
-                    Os tradicionais Jogos Interclasses estão chegando e
-                    prometem reunir os estudantes em dias de muita competição,
-                    integração e diversão.
+                    Os estudantes participarão de diversas modalidades
+                    esportivas, incentivando o trabalho em equipe,
+                    o respeito e o espírito esportivo.
                 </p>
 
                 <button type="button">
@@ -202,19 +184,14 @@
 
                 <label for="comentario4">Comentário:</label>
 
-                <textarea
-                    id="comentario4"
-                    placeholder="Escreva seu comentário..."
-                ></textarea>
+                <textarea id="comentario4"
+                    placeholder="Escreva seu comentário..."></textarea>
             </div>
         </article>
 
-        <!-- Card 5 -->
         <article data-categoria="esportes">
-            <img
-                src="img/img5.jpeg"
-                alt="Torcida nas arquibancadas durante os jogos"
-            >
+            <img src="img/img5.jpeg"
+                alt="Torcida nas arquibancadas">
 
             <div>
                 <h2>
@@ -226,15 +203,13 @@
                 </p>
 
                 <p>
-                    Torcidas prometem dar um show de animação durante
-                    os Interclasses.
+                    As torcidas prometem dar um show de animação durante
+                    os Jogos Interclasses.
                 </p>
 
                 <p>
-                    Os estudantes já estão preparando cartazes, músicas
-                    e muita criatividade para apoiar suas equipes.
-                    A expectativa é transformar a quadra em um ambiente
-                    de alegria, respeito e integração.
+                    Os estudantes estão preparando cartazes, músicas e
+                    muita criatividade para apoiar suas equipes.
                 </p>
 
                 <button type="button">
@@ -247,19 +222,14 @@
 
                 <label for="comentario5">Comentário:</label>
 
-                <textarea
-                    id="comentario5"
-                    placeholder="Escreva seu comentário..."
-                ></textarea>
+                <textarea id="comentario5"
+                    placeholder="Escreva seu comentário..."></textarea>
             </div>
         </article>
 
-        <!-- Card 6 -->
         <article data-categoria="estudos">
-            <img
-                src="img/img6.jpeg"
-                alt="Avaliação escolar e estudos"
-            >
+            <img src="img/img6.jpeg"
+                alt="Avaliação escolar e estudos">
 
             <div>
                 <h2>
@@ -277,8 +247,7 @@
                 <p>
                     A avaliação auxilia no acompanhamento da aprendizagem
                     dos estudantes e pode ser utilizada por instituições
-                    de ensino superior participantes em seus processos
-                    seletivos.
+                    de ensino superior participantes em processos seletivos.
                 </p>
 
                 <button type="button">
@@ -291,19 +260,14 @@
 
                 <label for="comentario6">Comentário:</label>
 
-                <textarea
-                    id="comentario6"
-                    placeholder="Escreva seu comentário..."
-                ></textarea>
+                <textarea id="comentario6"
+                    placeholder="Escreva seu comentário..."></textarea>
             </div>
         </article>
 
-        <!-- Card 7 -->
         <article data-categoria="eventos">
-            <img
-                src="img/img7.jpeg"
-                alt="Pote de doces do desafio do Terceirão"
-            >
+            <img src="img/img7.jpeg"
+                alt="Pote de doces do desafio do Terceirão">
 
             <div>
                 <h2>
@@ -320,9 +284,8 @@
 
                 <p>
                     O participante deverá tentar adivinhar quantos doces
-                    há dentro das embalagens. Quem acertar ou chegar mais
-                    próximo da quantidade exata será o vencedor e levará
-                    o respectivo pote para casa.
+                    existem dentro das embalagens. Quem chegar mais perto
+                    da quantidade exata será o vencedor.
                 </p>
 
                 <button type="button">
@@ -335,14 +298,14 @@
 
                 <label for="comentario7">Comentário:</label>
 
-                <textarea
-                    id="comentario7"
-                    placeholder="Escreva seu comentário..."
-                ></textarea>
+                <textarea id="comentario7"
+                    placeholder="Escreva seu comentário..."></textarea>
             </div>
         </article>
+
     </main>
 
     <script src="iscript.js"></script>
 </body>
+
 </html>
